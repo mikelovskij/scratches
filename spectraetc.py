@@ -13,3 +13,5 @@ ax.set_xlabel('Frequency [Hz]')
 ax.set_ylabel(r'GW ASD [strain/\rtHz]')
 ax.set_title('LIGO Livingston Observatory sensitivity variance')
 plot.save('variance.png')
+
+#commonto!
