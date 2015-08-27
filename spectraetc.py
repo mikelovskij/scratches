@@ -1,7 +1,7 @@
 from gwpy.timeseries import TimeSeries
 
 llo = TimeSeries.fetch('L1:LDAS-STRAIN,rds', 'August 1 2010', 'August 1 2010 00:10')
-variance = llo.spectral_variance(1, log=True, low=1e-24, high=1e-19, nbins=100)
+variance = llo.spectral_variance(10, fftlength=1, log=True, low=1e-24, high=1e-19, nbins=100)
 
 
 plot = variance.plot(norm='log', vmin=0.5, vmax=100)
