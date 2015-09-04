@@ -1,0 +1,29 @@
+In [9]: ndsio.host_resolution_order?
+Type:           function
+Base Class:     <type 'function'>
+String Form:    <function host_resolution_order at 0x2d30b18>
+Namespace:      Interactive
+File:           /mnt/home2/detchar/opt/gwpysoft/lib64/python2.6/site-packages/gwpy/io/nds.py
+Definition:     ndsio.host_resolution_order(ifo, env='NDSSERVER', epoch='now', lookback=1209600)
+Docstring:
+    Generate a logical ordering of NDS (host, port) tuples for this IFO
+
+    Parameters
+    ----------
+    ifo : `str`
+        prefix for IFO of interest
+    env : `str`, optional
+        environment variable name to use for server order,
+        default ``'NDSSERVER'``. The contents of this variable should
+        be a comma-separated list of `host:port` strings, e.g.
+        ``'nds1.server.com:80,nds2.server.com:80'``
+    epoch : `~gwpy.time.LIGOTimeGPS`, `float`
+        GPS epoch of data requested
+    lookback : `float`
+        duration of spinning-disk cache. This value triggers defaulting to
+        the CIT NDS2 server over those at the LIGO sites
+
+    Returns
+    -------
+    hro : `list` of `2-tuples <tuple>`
+        ordered `list` of ``(host, port)`` tuples
