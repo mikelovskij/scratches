@@ -2,7 +2,7 @@ import nds2
 
 conn = nds2.connection('nds.ligo-la.caltech.edu')
 print conn
-channel = ['L1:GDS-CALIB_STRAIN']
+channel = ['L1:IOP-SUS_AUX_H56_DAC_DT_OUT_DQ']
 print "channel = {0}".format(channel)
 
 print "Now testing the command 'conn.iterate(channel)' "
